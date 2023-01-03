@@ -1,0 +1,4 @@
+aiogram<3.0
+python-dotenv~=0.19.2
+asyncpg~=0.25.0
+pytest
