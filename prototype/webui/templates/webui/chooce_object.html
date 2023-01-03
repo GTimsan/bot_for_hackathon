@@ -1,0 +1,20 @@
+{% extends 'webui/base.html' %}
+{% block content %}
+<div class="col-xs-12 col-md-12">
+    <h3 class="text-center">Выберети тип объекта</h3>
+    <p class="text-center">{{ type_object.name }}</p>
+</div>
+
+{% for object in objects %}
+<div class="col-xs-4">
+    <a id="object_{{ object.id }}" class="btn btn-success m-2" href="{% url 'chooce_time' object.id %}">
+        <!-- <img src="{{ object.image }}" /> -->
+        <b>{{ object.name }}</b><br>
+        <i>на {{ object.floor }} этаже</i><br>
+        <i>{{ object.desc }}</i><br>
+        <i>Номер комнаты:{{ object.room_number }}</i><br>
+    </a>
+</div>
+{% endfor %}
+
+{% endblock %}

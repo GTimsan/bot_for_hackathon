@@ -1,0 +1,9 @@
+{% extends 'webui/base.html' %}
+{% block content %}
+<div class="col-xs-12 col-md-12">
+    <h3 class="text-center">Выберети кампус</h3>
+</div>
+{% for campus in campuses %}
+    <div class="col-xs-6 com-md-6 m-2"><a id="campus_{{ campus.id }}" class="btn btn-success" href="{% url 'chooce_type' campus.id %}">{{ campus.name }}</a></div>
+{% endfor %}
+{% endblock %}

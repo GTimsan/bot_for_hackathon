@@ -1,0 +1,10 @@
+{% extends 'webui/base.html' %}
+{% block content %}
+<div class="col-xs-12 col-md-12">
+    <h3 class="text-center">Выберети обьект бронирования</h3>
+</div>
+<!-- <div class="col-xs-12 com-md-12 m-2"><span class=" text-center">{{ campus.name }}</span></a></div> -->
+{% for object in objects %}
+<div class="col-xs-6 com-md-6 m-2"><a id="object_{{ object.id }}" class="btn btn-success" href="">{{ object.name }}</a></div>
+{% endfor %}
+{% endblock %}

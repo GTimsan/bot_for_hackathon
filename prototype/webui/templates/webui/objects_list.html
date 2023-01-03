@@ -1,0 +1,15 @@
+{% extends 'webui/base.html' %}
+{% block content %}
+  {% for object in objects %}
+    <div class="row">
+        <div class="col-xs-1">{{ object.id }}</div>
+        <div class="col-xs-1">{{ object.name}}</div>
+        <div class="col-xs-1">{{ object.object_type }}</div>
+        <div class="col-xs-1">{{ object.desc }}</div>
+        <div class="col-xs-1">{{ object.image }}</div>
+        <div class="col-xs-1">{{ object.floor }}</div>
+        <div class="col-xs-1">{{ object.room_number }}</div>
+        <div class="col-xs-1">{{ object.campus }}</div>
+    </div>    
+    {% endfor %}
+{% endblock %}

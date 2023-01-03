@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">
+        <button type="button" class="class_home">Change Content</button>
+        </div>
+        <div id="div1"></div>
+        <script src="https://yastatic.net/jquery/3.3.1/jquery.min.js"></script>
+        <script >
+        $(document).ready(function(){
+            $(".class_home").click(function(){
+              $.ajax({url: "ajax_url", success: function(result){
+                $("#div1").html(result);
+                console.log(result);
+              }});
+            });
+        });
+        </script>
+</body>
+</html>

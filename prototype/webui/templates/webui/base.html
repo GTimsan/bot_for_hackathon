@@ -1,0 +1,58 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <title>Booking bot</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="description" content="Бот для телеграм">
+    <meta name="keywords" content="Бот для телеграм">
+    <meta name="author" content="shwan">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+        integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main role="main">
+        <div class="container">
+            <div id="ajaxr" class="row justify-content-center">
+                {# здесь выведется тело страницы,#}
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </main>
+    <footer role="contentinfo" class="footer">
+        <div class="container text-center">
+            <span class="text-center">© Weeklion 2022 г.</span>
+        </div>
+    </footer>
+</body>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+<script src="https://yastatic.net/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#campus_1").click(function(){
+          $.ajax({url: "ajax_url", success: function(result){
+            $("#ajaxr").html(result);
+            console.log(result);
+          }});
+        });
+    });
+</script>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+    integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+    integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+    crossorigin="anonymous"></script>
+
+</html>
